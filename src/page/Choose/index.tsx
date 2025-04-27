@@ -1,9 +1,19 @@
 import { useEffect, useState } from 'react'
 
-import randomFlip from '../../utils/random'
+import { randomFlip, total } from '../../utils/function'
 
 const Choose = () => {
   const [actionLog, setActionLog] = useState<boolean[] | null>(null)
+  const [coinsList, setCoinsList] = useState<number[]>([])
+
+  const handleTossCoins = () => {
+    setActionLog(randomFlip(3))
+  }
+
+  useEffect(() => {
+    if (actionLog === null) return
+    setCoinsList([...coinsList, total(actionLog)])
+  }, [actionLog])
 
   useEffect(() => {
     setActionLog(randomFlip(3))
@@ -22,7 +32,12 @@ const Choose = () => {
           />
         ))}
       </div>
-      <button type="button">第二次</button>
+      <button type="button" onClick={handleTossCoins}>
+        擲第
+        {coinsList.length + 1}
+        爻
+      </button>
+      <div className="coin-list">{coinsList}</div>
     </div>
   )
 }
