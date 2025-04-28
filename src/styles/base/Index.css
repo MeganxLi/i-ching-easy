@@ -32,4 +32,29 @@
       width: 25%;
     }
   }
+
+  .symbol-list {
+    display: flex;
+    gap: 4px;
+    flex-direction: column;
+
+    .symbol-item {
+      width: 2.5rem;
+      display: grid;
+
+      span {
+        display: block;
+        border-bottom: 3px solid #ffffff;
+      }
+    }
+
+    .symbol-line-yang {
+      grid-template-columns: 50px 0px;
+    }
+
+    .symbol-line-yin {
+      gap: 6px;
+      grid-template-columns: 22px 22px;
+    }
+  }
 }
