@@ -1,12 +1,15 @@
 import { useEffect, useState } from 'react'
 
-import { randomFlip, total } from '../../utils/function'
+import { randomFlip, symbolLine, total } from '../../utils/function'
 
 const Choose = () => {
   const [actionLog, setActionLog] = useState<boolean[] | null>(null)
   const [coinsList, setCoinsList] = useState<number[]>([])
 
+  const exceedLength = (): boolean => coinsList.length === 6
+
   const handleTossCoins = () => {
+    if (exceedLength()) return
     setActionLog(randomFlip(3))
   }
 
@@ -37,7 +40,15 @@ const Choose = () => {
         {coinsList.length + 1}
         爻
       </button>
-      <div className="coin-list">{coinsList}</div>
+      <div className="symbol-list">
+        {coinsList.map((item, i) => (
+          <div key={i} className={`symbol-item ${symbolLine(item) ? 'symbol-line-yang' : 'symbol-line-yin'}`}>
+            <span />
+            <span />
+          </div>
+        ))}
+
+      </div>
     </div>
   )
 }
