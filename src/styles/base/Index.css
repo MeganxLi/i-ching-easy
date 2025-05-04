@@ -27,9 +27,19 @@
     justify-content: center;
     width: 80%;
     column-gap: 4rem;
+    transition: opacity 1s ease-out, visibility 0s linear 1s;
 
     .coin-item {
       width: 25%;
+      transition: transform 0.6s;
+
+      &.coin-front {
+        opacity: 1;
+      }
+
+      &.coin-back {
+        opacity: 0.45;
+      }
     }
   }
 
@@ -37,6 +47,7 @@
     display: flex;
     gap: 4px;
     flex-direction: column;
+    height: 40px;
 
     .symbol-item {
       width: 2.5rem;
