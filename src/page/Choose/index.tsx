@@ -4,15 +4,29 @@ import { randomFlip, symbolLine, total } from '../../utils/function'
 
 const Choose = () => {
   const [actionLog, setActionLog] = useState<boolean[] | null>(null)
-  const [coinsList, setCoinsList] = useState<number[]>([])
+  const [coinsList, setCoinsList] = useState<(number | null)[]>(
+    [null, null, null, null, null, null])
+  const [coinsNo, setCoinsNo] = useState<number>(0)
   const [isFlipping, setIsFlipping] = useState(false)
   const [isHidden, setIsHidden] = useState(false)
 
-  const exceedLength = (): boolean => coinsList.length === 6
+  const exceedLength = (): boolean => coinsList[5] !== null
 
   const handleTossCoins = () => {
     if (exceedLength()) return
     setActionLog(randomFlip(3))
+  }
+
+  const showLineClassName = (key: boolean | null): string => {
+    switch (key) {
+      case true:
+        return 'symbol-line-yang'
+      case false:
+        return 'symbol-line-yin'
+
+      default:
+        return ''
+    }
   }
 
   const startFlip = () => {
@@ -34,8 +48,12 @@ const Choose = () => {
 
   useEffect(() => {
     if (actionLog === null) return
+    setCoinsNo((prev) => prev + 1)
+    const tempCoinsList = coinsList
+    tempCoinsList[coinsNo] = total(actionLog)
+
     startFlip()
-    setCoinsList([...coinsList, total(actionLog)])
+    setCoinsList(tempCoinsList)
   }, [actionLog])
 
   useEffect(() => {
@@ -66,12 +84,12 @@ const Choose = () => {
         style={{ visibility: isHidden ? 'hidden' : 'visible' }}
       >
         擲第
-        {coinsList.length + 1}
+        {coinsNo + 1}
         爻
       </button>
       <div className={`symbol-list ${exceedLength() && !isFlipping ? 'animation-fade-top' : ''}`}>
         {coinsList.map((item, i) => (
-          <div key={i} className={`symbol-item ${symbolLine(item) ? 'symbol-line-yang' : 'symbol-line-yin'}`}>
+          <div key={i} className={`symbol-item ${showLineClassName(symbolLine(item))}`}>
             <span />
             <span />
           </div>

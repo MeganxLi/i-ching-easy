@@ -10,15 +10,19 @@ export const randomFlip = (frequency: number) => Array(frequency)
 export const total = (coins: boolean[]) => coins.reduce((sum, coin) => sum + (coin ? 3 : 2), 0)
 
 /**
- * 判斷陽(7、9)還是陰(6、8)
+ * 判斷陽(7、9) 還是陰(6、8)
  */
-export const symbolLine = (coin: number): boolean => {
+export const symbolLine = (coin: number | null): boolean | null => {
   switch (coin) {
     case 7:
     case 9:
       return true
 
-    default:
+    case 6:
+    case 8:
       return false
+
+    default:
+      return null
   }
 }
