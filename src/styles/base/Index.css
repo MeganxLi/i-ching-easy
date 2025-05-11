@@ -47,11 +47,13 @@
     display: flex;
     gap: 4px;
     flex-direction: column;
-    height: 40px;
 
     .symbol-item {
-      width: 2.5rem;
+      width: auto;
       display: grid;
+      transform: scaleX(0);
+      transform-origin: bottom left;
+      transition: transform 0.4s ease-out;
 
       span {
         display: block;
@@ -61,9 +63,11 @@
 
     .symbol-line-yang {
       grid-template-columns: 50px 0px;
+      transform: scaleX(1);
     }
 
     .symbol-line-yin {
+      transform: scaleX(1);
       gap: 6px;
       grid-template-columns: 22px 22px;
     }
