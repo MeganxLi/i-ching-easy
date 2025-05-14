@@ -43,6 +43,10 @@ button {
   }
 }
 
+.display-none {
+  display: none;
+}
+
 /* transform 動畫 */
 
 .animation-flip-loop {
@@ -97,6 +101,9 @@ button {
 
 .animation-fade-top {
   animation: fadeTop 1s forwards;
+  position: absolute;
+  top: 50%;
+  display: block;
 }
 
 @keyframes fadeTop {
@@ -104,6 +111,6 @@ button {
     transform: translateY(0);
   }
   100% {
-    transform: translateY(-400px);
+    transform: translateY(-50%);
   }
 }

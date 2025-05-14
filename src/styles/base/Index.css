@@ -45,8 +45,9 @@
 
   .symbol-list {
     display: flex;
-    gap: 4px;
     flex-direction: column;
+    align-items: center;
+    gap: 4px;
 
     .symbol-item {
       width: auto;
@@ -70,6 +71,23 @@
       transform: scaleX(1);
       gap: 6px;
       grid-template-columns: 22px 22px;
+    }
+  }
+
+  .judgment {
+    font-size: 1.5rem;
+    line-height: 3rem;
+    margin-top: 0.2rem;
+    padding: 0 1.5rem;
+
+    .judgment-title {
+      text-align: center;
+      color: var(--color-basic-white);
+    }
+
+    .judgment-text {
+      color: var(--color-primary-default);
+      text-align: center;
     }
   }
 }

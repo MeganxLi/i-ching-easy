@@ -87,13 +87,21 @@ const Choose = () => {
         {coinsNo + 1}
         爻
       </button>
-      <div className={`symbol-list ${exceedLength() && !isFlipping ? 'animation-fade-top' : ''}`}>
-        {coinsList.map((item, i) => (
-          <div key={i} className={`symbol-item ${showLineClassName(symbolLine(item))}`}>
-            <span />
-            <span />
-          </div>
-        ))}
+      <div className={exceedLength() && !isFlipping ? 'animation-fade-top' : ''}>
+        <div className="symbol-list">
+          {coinsList.map((item, i) => (
+            <div key={i} className={`symbol-item ${showLineClassName(symbolLine(item))}`}>
+              <span />
+              <span />
+            </div>
+          ))}
+        </div>
+        <div className={`judgment ${exceedLength() && !isFlipping ? '' : 'display-none'}`}>
+          <p className="judgment-title">62. 小過卦</p>
+          <p className="judgment-text">
+            亨可小事，不可大事飛鳥遺之音，不宜上，宜下，大吉
+          </p>
+        </div>
       </div>
     </div>
   )
