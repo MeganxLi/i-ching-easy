@@ -6,7 +6,9 @@ type HexagramType = {
   id: number,
   name: string,
   judgment: string,
-  binary: string
+  binary: string,
+  upper: string,
+  lower: string
 }
 
 type GetHexagramType = {
