@@ -47,3 +47,25 @@ export const calcChangingHexagram = (coin: number | null): number | null => {
       return null
   }
 }
+
+// 卦象，變卦會呈現紅色
+export const showLineClassName = (key: number | null): string => {
+  const yang = 'symbol-line-yang'
+  const yin = 'symbol-line-yin'
+  const change = 'symbol-line-red'
+
+  switch (key) {
+    case 7:
+      return yang
+    case changingNumber[0]:
+      return `${yang} ${change}`
+
+    case 8:
+      return yin
+    case changingNumber[1]:
+      return `${yin} ${change}`
+
+    default:
+      return ''
+  }
+}
