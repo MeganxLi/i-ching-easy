@@ -72,6 +72,10 @@
       gap: 6px;
       grid-template-columns: 22px 22px;
     }
+
+    .symbol-line-red > span {
+      border-color: var(--color-basic-red);
+    }
   }
 
   .judgment {
