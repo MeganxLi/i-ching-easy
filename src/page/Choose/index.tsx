@@ -1,12 +1,22 @@
 import { useEffect, useState } from 'react'
 
-import { randomFlip, symbolLine, total } from '../../utils/function'
+import hexagramsData from '../../constants/hexagrams.json'
+import {
+  randomFlip, calcInitialHexagram, total, calcChangingHexagram,
+  changingNumber,
+} from '../../utils/function'
 
 const Choose = () => {
   const [actionLog, setActionLog] = useState<boolean[] | null>(null)
   const [coinsList, setCoinsList] = useState<(number | null)[]>(
     [null, null, null, null, null, null])
   const [coinsNo, setCoinsNo] = useState<number>(0)
+  const [resultHexagram, setResultHexagram] = useState<GetHexagramType>({
+    initial: undefined,
+    changing: undefined,
+    hasChanging: false,
+  })
+
   const [isFlipping, setIsFlipping] = useState(false)
   const [isHidden, setIsHidden] = useState(false)
 
@@ -17,11 +27,11 @@ const Choose = () => {
     setActionLog(randomFlip(3))
   }
 
-  const showLineClassName = (key: boolean | null): string => {
+  const showLineClassName = (key: string | null): string => {
     switch (key) {
-      case true:
+      case '1':
         return 'symbol-line-yang'
-      case false:
+      case '0':
         return 'symbol-line-yin'
 
       default:
@@ -47,10 +57,36 @@ const Choose = () => {
   }
 
   useEffect(() => {
-    if (actionLog === null) return
+    if (actionLog === null || coinsNo === 6) return
     setCoinsNo((prev) => prev + 1)
     const tempCoinsList = coinsList
-    tempCoinsList[coinsNo] = total(actionLog)
+    const tempTotal = total(actionLog)
+    tempCoinsList[coinsNo] = tempTotal
+
+    console.log('tempCoinsList', tempCoinsList)
+    // 獲得結果，處理本卦和變卦
+    if (coinsNo === 5) {
+      // 判斷是否有變卦
+      const hasChangingLines = tempCoinsList.some(
+        (num) => num === changingNumber[0] || num === changingNumber[1],
+      )
+
+      const initialBinary = tempCoinsList.map((num) => calcInitialHexagram(num)).join('')
+      const changeBinary = tempCoinsList.map((num) => calcChangingHexagram(num)).join('')
+      console.log('initialBinary', initialBinary, 'changeBinary', changeBinary)
+
+      const findBinary = (
+        binary: string,
+      ): HexagramType | undefined => hexagramsData.find((g) => g.binary === binary)
+
+      const getBinary = {
+        initial: findBinary(initialBinary),
+        changing: findBinary(changeBinary),
+        hasChanging: hasChangingLines,
+      }
+      setResultHexagram(getBinary)
+      console.log('getBinary', getBinary)
+    }
 
     startFlip()
     setCoinsList(tempCoinsList)
@@ -89,19 +125,42 @@ const Choose = () => {
       </button>
       <div className={exceedLength() && !isFlipping ? 'animation-fade-top' : ''}>
         <div className="symbol-list">
-          {coinsList.map((item, i) => (
-            <div key={i} className={`symbol-item ${showLineClassName(symbolLine(item))}`}>
+          {resultHexagram.initial?.binary.split('').map((item, i) => (
+            <div key={i} className={`symbol-item ${showLineClassName(item)}`}>
               <span />
               <span />
             </div>
           ))}
         </div>
         <div className={`judgment ${exceedLength() && !isFlipping ? '' : 'display-none'}`}>
-          <p className="judgment-title">62. 小過卦</p>
+          <p className="judgment-title">
+            {`第${resultHexagram.initial?.id}卦 · ${resultHexagram.initial?.name}`}
+          </p>
           <p className="judgment-text">
-            亨可小事，不可大事飛鳥遺之音，不宜上，宜下，大吉
+            {resultHexagram.initial?.judgment}
           </p>
         </div>
+
+        {resultHexagram.hasChanging && (
+          <>
+            <div className="symbol-list">
+              {resultHexagram.changing?.binary.split('').map((item, i) => (
+                <div key={i} className={`symbol-item ${showLineClassName((item))}`}>
+                  <span />
+                  <span />
+                </div>
+              ))}
+            </div>
+            <div className={`judgment ${exceedLength() && !isFlipping ? '' : 'display-none'}`}>
+              <p className="judgment-title">
+                {`${resultHexagram.changing?.id}. ${resultHexagram.changing?.name}`}
+              </p>
+              <p className="judgment-text">
+                {resultHexagram.changing?.judgment}
+              </p>
+            </div>
+          </>
+        )}
       </div>
     </div>
   )
