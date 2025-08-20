@@ -1,0 +1,514 @@
+[
+  {
+    "id": 1,
+    "name": "乾",
+    "judgment": "元，亨，利，貞",
+    "binary": "111111",
+    "upper": "乾",
+    "lower": "乾"
+  },
+  {
+    "id": 2,
+    "name": "坤",
+    "judgment": "元，亨，利，牝馬之貞",
+    "binary": "000000",
+    "upper": "坤",
+    "lower": "坤"
+  },
+  {
+    "id": 3,
+    "name": "屯",
+    "judgment": "元亨，利貞，勿用有攸往，利建侯",
+    "binary": "010001",
+    "upper": "震",
+    "lower": "坎"
+  },
+  {
+    "id": 4,
+    "name": "蒙",
+    "judgment": "亨，匪我求童蒙，童蒙求我，初筮告，再三瀆，瀆則不告，利貞",
+    "binary": "100010",
+    "upper": "坎",
+    "lower": "艮"
+  },
+  {
+    "id": 5,
+    "name": "需",
+    "judgment": "有孚，光亨，貞吉，利涉大川",
+    "binary": "010111",
+    "upper": "乾",
+    "lower": "坎"
+  },
+  {
+    "id": 6,
+    "name": "訟",
+    "judgment": "有孚窒惕，中吉，終凶，利見大人，不利涉大川",
+    "binary": "111010",
+    "upper": "坎",
+    "lower": "乾"
+  },
+  {
+    "id": 7,
+    "name": "師",
+    "judgment": "貞，丈人吉，无咎",
+    "binary": "000010",
+    "upper": "坎",
+    "lower": "坤"
+  },
+  {
+    "id": 8,
+    "name": "比",
+    "judgment": "吉，原筮，元永貞，无咎，不寧方來，後夫凶",
+    "binary": "010000",
+    "upper": "坤",
+    "lower": "坎"
+  },
+  {
+    "id": 9,
+    "name": "小畜",
+    "judgment": "亨，密雲不雨，自我西郊",
+    "binary": "110111",
+    "upper": "乾",
+    "lower": "巽"
+  },
+  {
+    "id": 10,
+    "name": "履",
+    "judgment": "虎尾，不咥人，亨",
+    "binary": "111011",
+    "upper": "兌",
+    "lower": "乾"
+  },
+  {
+    "id": 11,
+    "name": "泰",
+    "judgment": "小往大來，吉，亨",
+    "binary": "000111",
+    "upper": "乾",
+    "lower": "坤"
+  },
+  {
+    "id": 12,
+    "name": "否",
+    "judgment": "否之匪人，不利君子貞，大往小來",
+    "binary": "111000",
+    "upper": "坤",
+    "lower": "乾"
+  },
+  {
+    "id": 13,
+    "name": "同人",
+    "judgment": "同人于野，亨，利涉大川，利君子貞",
+    "binary": "101111",
+    "upper": "乾",
+    "lower": "離"
+  },
+  {
+    "id": 14,
+    "name": "大有",
+    "judgment": "元亨",
+    "binary": "111101",
+    "upper": "離",
+    "lower": "乾"
+  },
+  {
+    "id": 15,
+    "name": "謙",
+    "judgment": "亨，君子有終",
+    "binary": "000100",
+    "upper": "艮",
+    "lower": "坤"
+  },
+  {
+    "id": 16,
+    "name": "豫",
+    "judgment": "利建侯，行師",
+    "binary": "001000",
+    "upper": "坤",
+    "lower": "震"
+  },
+  {
+    "id": 17,
+    "name": "隨",
+    "judgment": "元亨，利貞，无咎",
+    "binary": "011001",
+    "upper": "震",
+    "lower": "兌"
+  },
+  {
+    "id": 18,
+    "name": "蠱",
+    "judgment": "元亨，利涉大川，先甲三日，後甲三日",
+    "binary": "110100",
+    "upper": "艮",
+    "lower": "巽"
+  },
+  {
+    "id": 19,
+    "name": "臨",
+    "judgment": "元亨，利貞，至于八月有凶",
+    "binary": "000011",
+    "upper": "兌",
+    "lower": "坤"
+  },
+  {
+    "id": 20,
+    "name": "觀",
+    "judgment": "盥而不薦，有孚顒若",
+    "binary": "110000",
+    "upper": "坤",
+    "lower": "巽"
+  },
+  {
+    "id": 21,
+    "name": "噬嗑",
+    "judgment": "亨，利用獄",
+    "binary": "101001",
+    "upper": "震",
+    "lower": "離"
+  },
+  {
+    "id": 22,
+    "name": "賁",
+    "judgment": "亨，小利有攸往",
+    "binary": "100101",
+    "upper": "離",
+    "lower": "艮"
+  },
+  {
+    "id": 23,
+    "name": "剝",
+    "judgment": "不利有攸往",
+    "binary": "100000",
+    "upper": "坤",
+    "lower": "艮"
+  },
+  {
+    "id": 24,
+    "name": "復",
+    "judgment": "亨，出入无疾，朋來无咎，反復其道，七日來復，利有攸往",
+    "binary": "000001",
+    "upper": "震",
+    "lower": "坤"
+  },
+  {
+    "id": 25,
+    "name": "無妄",
+    "judgment": "元亨，利貞，其匪正有眚，不利有攸往",
+    "binary": "111001",
+    "upper": "震",
+    "lower": "乾"
+  },
+  {
+    "id": 26,
+    "name": "大畜",
+    "judgment": "利貞，不家食吉，利涉大川",
+    "binary": "100111",
+    "upper": "乾",
+    "lower": "艮"
+  },
+  {
+    "id": 27,
+    "name": "頤",
+    "judgment": "貞吉，觀頤，自求口實",
+    "binary": "100001",
+    "upper": "震",
+    "lower": "艮"
+  },
+  {
+    "id": 28,
+    "name": "大過",
+    "judgment": "棟橈，利有攸往，亨",
+    "binary": "011110",
+    "upper": "巽",
+    "lower": "兌"
+  },
+  {
+    "id": 29,
+    "name": "坎",
+    "judgment": "習坎，有孚，維心亨，行有尚",
+    "binary": "010010",
+    "upper": "坎",
+    "lower": "坎"
+  },
+  {
+    "id": 30,
+    "name": "離",
+    "judgment": "利貞，亨，畜牝牛，吉",
+    "binary": "101101",
+    "upper": "離",
+    "lower": "離"
+  },
+  {
+    "id": 31,
+    "name": "咸",
+    "judgment": "亨，利貞，取女吉",
+    "binary": "011100",
+    "upper": "艮",
+    "lower": "兌"
+  },
+  {
+    "id": 32,
+    "name": "恆",
+    "judgment": "恆，亨，無咎，利貞，利有攸往",
+    "binary": "001110",
+    "upper": "巽",
+    "lower": "震"
+  },
+  {
+    "id": 33,
+    "name": "遯",
+    "judgment": "亨，小利貞",
+    "binary": "111100",
+    "upper": "艮",
+    "lower": "乾"
+  },
+  {
+    "id": 34,
+    "name": "大壯",
+    "judgment": "利貞",
+    "binary": "001111",
+    "upper": "乾",
+    "lower": "震"
+  },
+  {
+    "id": 35,
+    "name": "晉",
+    "judgment": "康侯用錫馬蕃庶，晝日三接",
+    "binary": "101000",
+    "upper": "坤",
+    "lower": "離"
+  },
+  {
+    "id": 36,
+    "name": "明夷",
+    "judgment": "利艱貞",
+    "binary": "000101",
+    "upper": "離",
+    "lower": "坤"
+  },
+  {
+    "id": 37,
+    "name": "家人",
+    "judgment": "利女貞",
+    "binary": "110101",
+    "upper": "離",
+    "lower": "巽"
+  },
+  {
+    "id": 38,
+    "name": "睽",
+    "judgment": "小事吉",
+    "binary": "101011",
+    "upper": "兌",
+    "lower": "離"
+  },
+  {
+    "id": 39,
+    "name": "蹇",
+    "judgment": "利西南，不利東北，利見大人，貞吉",
+    "binary": "010100",
+    "upper": "艮",
+    "lower": "坎"
+  },
+  {
+    "id": 40,
+    "name": "解",
+    "judgment": "利西南，无所往，其來復吉，有攸往，夙吉",
+    "binary": "001010",
+    "upper": "坎",
+    "lower": "震"
+  },
+  {
+    "id": 41,
+    "name": "損",
+    "judgment": "有孚，元吉，無咎，可貞，利有攸往，曷之用？二簋可用享",
+    "binary": "100011",
+    "upper": "兌",
+    "lower": "艮"
+  },
+  {
+    "id": 42,
+    "name": "益",
+    "judgment": "利有攸往，利涉大川",
+    "binary": "110001",
+    "upper": "震",
+    "lower": "巽"
+  },
+  {
+    "id": 43,
+    "name": "夬",
+    "judgment": "揚于王庭，孚號有厲，告自邑，不利即戎，利有攸往",
+    "binary": "011111",
+    "upper": "乾",
+    "lower": "兌"
+  },
+  {
+    "id": 44,
+    "name": "姤",
+    "judgment": "女壯，勿用取女",
+    "binary": "111110",
+    "upper": "巽",
+    "lower": "乾"
+  },
+  {
+    "id": 45,
+    "name": "萃",
+    "judgment": "亨，王假有廟，利見大人，亨，利貞，用大牲吉，利有攸往",
+    "binary": "011000",
+    "upper": "坤",
+    "lower": "兌"
+  },
+  {
+    "id": 46,
+    "name": "升",
+    "judgment": "元亨，用見大人，勿恤，南征吉",
+    "binary": "000110",
+    "upper": "巽",
+    "lower": "坤"
+  },
+  {
+    "id": 47,
+    "name": "困",
+    "judgment": "亨，貞，大人吉，无咎，有言不信",
+    "binary": "011010",
+    "upper": "坎",
+    "lower": "兌"
+  },
+  {
+    "id": 48,
+    "name": "井",
+    "judgment": "改邑不改井，无喪无得，往來井井，汔至亦未繘井，羸其瓶，凶",
+    "binary": "010110",
+    "upper": "巽",
+    "lower": "坎"
+  },
+  {
+    "id": 49,
+    "name": "革",
+    "judgment": "已日乃孚，元亨，利貞，悔亡",
+    "binary": "011101",
+    "upper": "離",
+    "lower": "兌"
+  },
+  {
+    "id": 50,
+    "name": "鼎",
+    "judgment": "元吉，亨",
+    "binary": "101110",
+    "upper": "巽",
+    "lower": "離"
+  },
+  {
+    "id": 51,
+    "name": "震",
+    "judgment": "亨，震來虩虩，笑言啞啞，震驚百里，不喪匕鬯",
+    "binary": "001001",
+    "upper": "震",
+    "lower": "震"
+  },
+  {
+    "id": 52,
+    "name": "艮",
+    "judgment": "艮其背，不獲其身，行其庭，不見其人，无咎",
+    "binary": "100100",
+    "upper": "艮",
+    "lower": "艮"
+  },
+  {
+    "id": 53,
+    "name": "漸",
+    "judgment": "女歸吉，利貞",
+    "binary": "100110",
+    "upper": "巽",
+    "lower": "艮"
+  },
+  {
+    "id": 54,
+    "name": "歸妹",
+    "judgment": "征凶，无攸利",
+    "binary": "001011",
+    "upper": "兌",
+    "lower": "震"
+  },
+  {
+    "id": 55,
+    "name": "豐",
+    "judgment": "亨，王假之，勿憂，宜日中",
+    "binary": "001101",
+    "upper": "離",
+    "lower": "震"
+  },
+  {
+    "id": 56,
+    "name": "旅",
+    "judgment": "小亨，旅貞吉",
+    "binary": "101100",
+    "upper": "艮",
+    "lower": "離"
+  },
+  {
+    "id": 57,
+    "name": "巽",
+    "judgment": "小亨，利有攸往，利見大人",
+    "binary": "110110",
+    "upper": "巽",
+    "lower": "巽"
+  },
+  {
+    "id": 58,
+    "name": "兌",
+    "judgment": "亨，利貞",
+    "binary": "011011",
+    "upper": "兌",
+    "lower": "兌"
+  },
+  {
+    "id": 59,
+    "name": "渙",
+    "judgment": "亨，王假有廟，利涉大川，利貞",
+    "binary": "110010",
+    "upper": "坎",
+    "lower": "巽"
+  },
+  {
+    "id": 60,
+    "name": "節",
+    "judgment": "亨，苦節不可貞",
+    "binary": "010011",
+    "upper": "兌",
+    "lower": "坎"
+  },
+  {
+    "id": 61,
+    "name": "中孚",
+    "judgment": "豚魚吉，利涉大川，利貞",
+    "binary": "110011",
+    "upper": "兌",
+    "lower": "巽"
+  },
+  {
+    "id": 62,
+    "name": "小過",
+    "judgment": "亨，可小事，不可大事，飛鳥遺之音，不宜上宜下，大吉",
+    "binary": "001100",
+    "upper": "艮",
+    "lower": "震"
+  },
+  {
+    "id": 63,
+    "name": "既濟",
+    "judgment": "亨，小利貞，初吉終亂",
+    "binary": "010101",
+    "upper": "離",
+    "lower": "坎"
+  },
+  {
+    "id": 64,
+    "name": "未濟",
+    "judgment": "亨，小狐汔濟，濡其尾，无攸利",
+    "binary": "101010",
+    "upper": "坎",
+    "lower": "離"
+  }
+]
