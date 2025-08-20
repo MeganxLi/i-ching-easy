@@ -102,7 +102,7 @@ const Choose = () => {
         style={{ visibility: isHidden ? 'hidden' : 'visible' }}
       >
         擲第
-        {coinsNo + 1}
+        {6 - coinsNo}
         爻
       </button>
       <div className={exceedLength() && !isFlipping ? 'animation-fade-top' : ''}>
@@ -116,7 +116,7 @@ const Choose = () => {
         </div>
         <div className={`judgment ${exceedLength() && !isFlipping ? '' : 'display-none'}`}>
           <p className="judgment-title">
-            {`第${resultHexagram?.id}卦 · ${resultHexagram?.name}`}
+            {`第 ${resultHexagram?.id} 卦 · ${resultHexagram?.name}`}
           </p>
           <p className="judgment-text">
             {resultHexagram?.judgment}
