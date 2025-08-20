@@ -24,7 +24,7 @@ main {
 }
 
 h2 {
-  font-size: 4rem;
+  font-size: 8vw;
   color: var(--color-basic-white);
   font-weight: bold;
 }

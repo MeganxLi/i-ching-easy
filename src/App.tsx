@@ -4,7 +4,7 @@ import PageSetting from './components/PageSetting'
 import PageContext from './context/Page'
 
 const App = () => {
-  const [page, setPage] = useState<number>(1)
+  const [page, setPage] = useState<number>(0)
   const changePage = () => setPage((prevPage) => prevPage + 1)
 
   const contextValue = useMemo(() => ({ changePage }), [changePage])
