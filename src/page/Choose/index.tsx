@@ -97,7 +97,7 @@ const Choose = () => {
       <button
         type="button"
         onClick={handleTossCoins}
-        className={exceedLength() ? 'animation-shrink-out' : ''}
+        className={`base-button ${exceedLength() ? 'animation-shrink-out' : ''}`}
         onAnimationEnd={handleAnimationEnd}
         style={{ visibility: isHidden ? 'hidden' : 'visible' }}
       >
