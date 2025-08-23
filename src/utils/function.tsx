@@ -1,3 +1,5 @@
+import hexagramsData from '../constants/hexagrams.json'
+
 export const randomFlip = (frequency: number) => Array(frequency)
   .fill(null)
   .map(() => Math.random() > 0.5)
@@ -76,4 +78,29 @@ export const showLineClassName = (key: number | string | null): string => {
     default:
       return ''
   }
+}
+
+/**
+ * 根據多個條件搜尋卦象列表
+ * @param {string} searchTerm 搜尋條件物件，可包含 name, id, upper, lower 等屬性
+ * @returns {Array<Object>} 符合條件的卦象陣列
+ */
+export const searchHexagrams = (searchTerm: string) => {
+  if (Object.keys(searchTerm).length === 0) {
+    return hexagramsData
+  }
+
+  const numericTerm = Number(searchTerm)
+
+  if (!Number.isNaN(numericTerm)) {
+    return hexagramsData.filter((item) => item.id === numericTerm)
+  }
+  console.log('近')
+
+  // 如果不是數字，則在卦名、上卦名和下卦名中進行模糊搜尋
+  return hexagramsData.filter((item) => (
+    item.name.includes(searchTerm)
+    || item.upper.includes(searchTerm)
+    || item.lower.includes(searchTerm)
+  ))
 }
