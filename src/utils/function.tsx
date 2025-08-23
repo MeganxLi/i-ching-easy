@@ -90,17 +90,19 @@ export const searchHexagrams = (searchTerm: string) => {
     return hexagramsData
   }
 
-  const numericTerm = Number(searchTerm)
+  // 模糊搜尋
+  return hexagramsData.filter((item) => {
+    // id
+    const idAsString = String(item.id)
+    if (!Number.isNaN(Number(searchTerm))) {
+      return idAsString.includes(searchTerm)
+    }
 
-  if (!Number.isNaN(numericTerm)) {
-    return hexagramsData.filter((item) => item.id === numericTerm)
-  }
-  console.log('近')
-
-  // 如果不是數字，則在卦名、上卦名和下卦名中進行模糊搜尋
-  return hexagramsData.filter((item) => (
-    item.name.includes(searchTerm)
-    || item.upper.includes(searchTerm)
-    || item.lower.includes(searchTerm)
-  ))
+    // 如果不是數字，則在卦名、上卦名和下卦名中進行
+    return (
+      item.name.includes(searchTerm)
+      || item.upper.includes(searchTerm)
+      || item.lower.includes(searchTerm)
+    )
+  })
 }
