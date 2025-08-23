@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react'
 
+import Dictionary from './components/Dictionary'
 import PageSetting from './components/PageSetting'
 import PageContext from './context/Page'
 
@@ -11,6 +12,7 @@ const App = () => {
 
   return (
     <PageContext.Provider value={contextValue}>
+      <Dictionary />
       {PageSetting[page]}
     </PageContext.Provider>
   )

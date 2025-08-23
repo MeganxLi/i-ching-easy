@@ -7,7 +7,7 @@ const Start = () => {
   return (
     <main id="Start">
       <h2>冥想問題後按下開始</h2>
-      <button type="button" onClick={changePage}>開始</button>
+      <button className="base-button" type="button" onClick={changePage}>開始</button>
     </main>
   )
 }

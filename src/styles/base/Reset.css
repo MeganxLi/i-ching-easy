@@ -137,3 +137,8 @@ input:focus-visible {
   border: none;
   outline: none;
 }
+
+button {
+  background-color: transparent;
+  border: none;
+}
