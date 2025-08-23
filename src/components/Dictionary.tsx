@@ -5,7 +5,7 @@ import {
 } from 'lucide-react'
 
 import hexagramsData from '../constants/hexagrams.json'
-import { showLineClassName } from '../utils/function'
+import { searchHexagrams, showLineClassName } from '../utils/function'
 
 const Dictionary = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false)
@@ -18,6 +18,8 @@ const Dictionary = () => {
   const findIndex = (
     no: number,
   ): HexagramType | undefined => hexagramsData.find((g) => g.id === no)
+
+  const resultSearch = searchHexagrams(searchText)
 
   return (
     <>
@@ -75,11 +77,11 @@ const Dictionary = () => {
           <div className="dictionary-list">
             <h5 className="dictionary-title">
               卦象列表 (
-              {hexagramsData.length}
+              {resultSearch.length}
               )
             </h5>
             <div className="dictionary-list-content">
-              {hexagramsData.map((item: HexagramType, key) => (
+              {resultSearch.map((item: HexagramType, key) => (
                 <div className={`dictionary-list-item ${selectedIndex === item.id ? 'clicked' : ''}`} key={key} onClick={() => setSelectedIndex(item.id)}>
                   <span className="dictionary-item-index">{String(item.id).padStart(2, '0')}</span>
                   <span className="dictionary-item-name">{item.name}</span>
