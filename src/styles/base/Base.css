@@ -64,7 +64,7 @@ input {
 }
 
 h5 {
-  font-size: 1.25rem;
+  font-size: 1.25em;
   font-weight: bold;
   color: var(--color-secondary-light);
   line-height: 2rem;
