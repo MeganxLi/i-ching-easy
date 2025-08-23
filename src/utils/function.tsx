@@ -48,18 +48,26 @@ export const calcChangingHexagram = (coin: number | null): number | null => {
   }
 }
 
-// 卦象，變卦會呈現紅色
-export const showLineClassName = (key: number | null): string => {
+/**
+ * 卦象，如果是變爻，將回傳紅色樣式的類別。
+ * @param key number | string | null
+ * @typedef 1, 7, 6 為陽
+ * @typedef 0, 8, 9 為陰
+ * @returns className
+ */
+export const showLineClassName = (key: number | string | null): string => {
   const yang = 'symbol-line-yang'
   const yin = 'symbol-line-yin'
   const change = 'symbol-line-red'
 
   switch (key) {
+    case '1':
     case 7:
       return yang
     case changingNumber[0]:
       return `${yang} ${change}`
 
+    case '0':
     case 8:
       return yin
     case changingNumber[1]:

@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Gaegu&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Serif+TC:wght@200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
 
 :root {
   --color-primary-default: #b7ada1;
@@ -71,6 +72,41 @@ h5 {
 
 .display-none {
   display: none;
+}
+
+.symbol-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+
+  .symbol-item {
+    width: auto;
+    display: grid;
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: transform 0.4s ease-out;
+
+    span {
+      display: block;
+      border-bottom: 3px solid #ffffff;
+    }
+  }
+
+  .symbol-line-yang {
+    grid-template-columns: 50px 0px;
+    transform: scaleX(1);
+  }
+
+  .symbol-line-yin {
+    transform: scaleX(1);
+    gap: 6px;
+    grid-template-columns: 22px 22px;
+  }
+
+  .symbol-line-red > span {
+    border-color: var(--color-basic-red);
+  }
 }
 
 /* transform 動畫 */
