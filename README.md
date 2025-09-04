@@ -42,7 +42,6 @@
 - [React.js](https://reactjs.org/)
 - [Vite](https://vitejs.dev/)
 - [EsLint](https://eslint.org/)
-- [Linaria](https://linaria.dev/)
 - [Lucide](https://lucide.dev/)
 
 ## Building
