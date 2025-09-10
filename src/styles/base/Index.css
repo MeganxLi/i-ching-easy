@@ -1,5 +1,5 @@
 #root {
-  min-height: 100vh;
+  min-height: 100dvh;
 }
 #Start {
   background-image: url("/images/background.png");
@@ -14,7 +14,7 @@
 }
 
 #Choose {
-  height: 100vh;
+  height: 100dvh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -70,7 +70,7 @@
 #Dictionary {
   position: fixed;
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
   background-color: var(--color-basic-black);
   z-index: 100;
   transform: translateX(100%);
